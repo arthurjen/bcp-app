@@ -16,16 +16,17 @@
 <body>
     <h1>Run some code</h1>
     <h2>UNDER CONSTRUCTION</h2>
+    <input autofocus id="input-number" type="number">
     <button onclick="getSquare()">Get Square</button>
     <script>
         function getSquare() {
-            var x = +prompt('a number?');
+            var input = document.getElementById('input-number');
+            var x = input.value;
             var square = x * x;
-            var cube = square * x;
+            var cube = x* square;
             console.log('square of', x, 'is', square);
             console.log('cube of', x, 'is', cube);
-        }
-        
+        }        
     </script>
 </body>
 </html>
