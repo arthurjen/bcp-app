@@ -11,6 +11,17 @@
         text-align: center;
         
     }
+    #result {
+        padding: 10px;
+        font-size: 2em;
+        border: 1px solid blue;
+
+    }
+
+    .done {
+        background: black;
+        color: white;
+    }
     </style>
 </head>
 <body>
@@ -22,9 +33,10 @@
     </div>
     <input id="input-number" type="number">
     <button onclick="getSquare()">Get Square</button>
+    <div id="result"></div>
     <div>
         <input autofocus id="emoji-test" placeholder="give emoji">
-        <button onclick="emoji()">How is it stored?</button>
+        <button onclick="emoji()" name="mister" value="😎">How is it stored?</button>
     </div>
     <script>
         function getSquare() {
@@ -42,7 +54,16 @@
             
             // calculate the answer
             var square = Math.pow(x, exponent);
+            
+            // get the result div
+            var result = document.getElementById('result');
 
+            result.innerHTML = '<em>' + x + ' to the power of ' + exponent + ' is ' + square + '</em>';
+           
+            // else {
+            //     result.style.color = 'red';
+            // }
+            result.classList.add('done');
             // log the answer to the console
             console.log(x, 'to the power of', exponent, 'is', square);
         }        
@@ -53,6 +74,15 @@
             var j = test.value;
             // see if console will print the actual emoji (it does)
             console.log(j);
+
+            // find the emoji button
+            var what = document.querySelector('button[name=mister]');
+
+            // store the value of the button
+            var ok = what.value;
+
+            // print to console the value
+            console.log(ok);
         }
     </script>
 </body>
