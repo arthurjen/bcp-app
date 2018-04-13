@@ -28,20 +28,30 @@
     </div>
     <script>
         function getSquare() {
+            // find the input with id "input-number"
             var input = document.getElementById('input-number');
+            // get the input, with name=[power], that is checked
             var power = document.querySelector('input[name=power]:checked');
             // console.log(power);
             // console.log(input);
-
+            
+            // get the value out of the number input:
             var x = input.value;
+            // get the value out of the radio button:
             var exponent = power.value;
-
+            
+            // calculate the answer
             var square = Math.pow(x, exponent);
+
+            // log the answer to the console
             console.log(x, 'to the power of', exponent, 'is', square);
         }        
         function emoji() {
+            // find the input with id "emoji-test"
             var test = document.getElementById('emoji-test');
+            // store the value of emoji-test into j
             var j = test.value;
+            // see if console will print the actual emoji (it does)
             console.log(j);
         }
     </script>
