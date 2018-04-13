@@ -7,13 +7,25 @@
     <style>
     h2 {
         background-color: yellow;
-        font-family: 'Times New Roman'
+        font-family: 'Times New Roman';
+        text-align: center;
         
     }
     </style>
 </head>
 <body>
-    <h1>On a new branch</h1>
+    <h1>Run some code</h1>
     <h2>UNDER CONSTRUCTION</h2>
+    <button onclick="getSquare()">Get Square</button>
+    <script>
+        function getSquare() {
+            var x = +prompt('a number?');
+            var square = x * x;
+            var cube = square * x;
+            console.log('square of', x, 'is', square);
+            console.log('cube of', x, 'is', cube);
+        }
+        
+    </script>
 </body>
 </html>
