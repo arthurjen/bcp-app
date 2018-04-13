@@ -15,18 +15,29 @@
 </head>
 <body>
     <h1>Run some code</h1>
-    <h2>UNDER CONSTRUCTION</h2>
+    <h2>🚧 UNDER CONSTRUCTION 🚧</h2>
+    <div>
+        square: <input checked name="power" type="radio" value="2">
+        cube: <input name="power" type="radio" value="3">
+    </div>
     <input autofocus id="input-number" type="number">
     <button onclick="getSquare()">Get Square</button>
     <script>
         function getSquare() {
             var input = document.getElementById('input-number');
+            var power = document.querySelector('input[name=power]:checked');
+            // console.log(power);
+            // console.log(input);
+
             var x = input.value;
-            var square = x * x;
-            var cube = x* square;
-            console.log('square of', x, 'is', square);
-            console.log('cube of', x, 'is', cube);
+            var exponent = power.value;
+
+            var square = Math.pow(x, exponent);
+            console.log(x, 'to the power of', exponent, 'is', square);
         }        
+        // function emoji() {
+        //     var test = document.
+        // }
     </script>
 </body>
 </html>
