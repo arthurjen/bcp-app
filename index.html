@@ -20,8 +20,12 @@
         square: <input checked name="power" type="radio" value="2">
         cube: <input name="power" type="radio" value="3">
     </div>
-    <input autofocus id="input-number" type="number">
+    <input id="input-number" type="number">
     <button onclick="getSquare()">Get Square</button>
+    <div>
+        <input autofocus id="emoji-test" placeholder="give emoji">
+        <button onclick="emoji()">How is it stored?</button>
+    </div>
     <script>
         function getSquare() {
             var input = document.getElementById('input-number');
@@ -35,9 +39,11 @@
             var square = Math.pow(x, exponent);
             console.log(x, 'to the power of', exponent, 'is', square);
         }        
-        // function emoji() {
-        //     var test = document.
-        // }
+        function emoji() {
+            var test = document.getElementById('emoji-test');
+            var j = test.value;
+            console.log(j);
+        }
     </script>
 </body>
 </html>
