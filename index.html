@@ -7,13 +7,84 @@
     <style>
     h2 {
         background-color: yellow;
-        font-family: 'Times New Roman'
-        
+        font-family: 'Times New Roman';
+        text-align: center;
+    }
+    label {
+        font-size: 1.5em;
     }
     </style>
 </head>
 <body>
     <h1>On a new branch</h1>
-    <h2>UNDER CONSTRUCTION</h2>
+    <h2>🚧 UNDER CONSTRUCTION 🚧</h2>
+    <p>shift option up/down to copy</p>
+    <p>option up/down to move lines</p>
+    <main>
+        <div>
+            <label>
+                default input: 
+                <input value="Hello" placeholder="🗿">
+            </label>
+        </div>
+        
+        <div>
+            <label>
+                type text:
+                <input type="text" placeholder="Please fill this in">
+            </label>
+        </div>
+        <div>
+            <label>
+                type number:
+                <input type="number" placeholder="Number">
+            </label>
+        </div>
+        <div>
+            <label>
+                type checkbox:
+                <input type="checkbox">
+                <input checked type="checkbox">
+            </label>
+        </div>
+        <div>
+            type radio:
+            <label>
+                even: <input name="num" type="radio">
+            </label>
+            <label>
+                odd: <input name="num" type="radio">
+            </label>
+            <label>
+                none: <input name="num" type="radio">
+            </label>
+        </div>
+        <div>
+            <label>
+                type textarea:
+                <textarea>here is some text.</textarea>
+            </label>
+        </div>
+        <div>
+            <button>click me!</button>
+        </div>
+        
+    </main>
+    <script>
+        var primeCounter = 0;
+        for(var i = 2; i < 200; i++) {
+            for(var j = 2; j <= i; j++) {
+                if(i % j === 0 && i !== j) {
+                    break;
+                }
+                else if(i === j) {
+                    console.log(i);
+                    primeCounter++;
+                }
+                
+            }
+        }
+        console.log(primeCounter, 'total prime numbers.');
+    </script>
 </body>
 </html>
